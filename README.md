@@ -1,2 +1,2 @@
 # YouTube-ReactJS
-Building YouTube using React JS
+Building YouTube using React JS by Madhav Sahi
