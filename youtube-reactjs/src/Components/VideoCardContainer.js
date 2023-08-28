@@ -1,7 +1,7 @@
 import React from "react";
 
 const VideoCardContainer = ({ info }) => {
-  console.log(info);
+  // console.log(info);
   return (
     <div className=" rounded-lg shadow-lg p-2">
       <img alt="thumbnail" src={info?.snippet?.thumbnails?.medium?.url} className="rounded-lg hover:cursor-pointer" />
