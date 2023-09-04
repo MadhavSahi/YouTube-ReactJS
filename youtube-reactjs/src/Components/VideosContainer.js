@@ -7,6 +7,7 @@ const VideosContainer = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
+    // console.log("Hey video container");
     getPopularVideos();
   }, []);
 
@@ -22,12 +23,12 @@ const VideosContainer = () => {
   };
   return (
     <>
-      <div className="mt-5 mx-3 rounded-lg flex flex-row flex-wrap">
-        {videos.map((item) => (
-          <Link to={"/watch?v="+ item?.id} key={item.id}>
-            <VideoCardContainer key={item.id} info={item}  />
-          </Link>
-        ))}
+        <div className="mt-1 lg:mx-3 md:mx-1 sm:mx-1 rounded-lg flex flex-row gap-1 flex-wrap">
+          {videos.map((item) => (
+            <Link to={"/watch?v=" + item?.id} key={item.id}>
+              <VideoCardContainer key={item.id} info={item} />
+            </Link>
+          ))}
       </div>
     </>
   );

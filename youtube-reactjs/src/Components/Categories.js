@@ -12,7 +12,6 @@ const Categories = () => {
     "Cricket",
     "Live",
     "Movies",
-    "EDM",
     "Tech",
     "Comedy",
     "Cars",
@@ -20,7 +19,7 @@ const Categories = () => {
   ];
   return (
     <>
-      <div className="flex flex-row">
+      <div className="flex flex-row gap-1">
         {btnList.map((item, index) => {
           return (<CategoryButton name={item} key={index} />);
         })}

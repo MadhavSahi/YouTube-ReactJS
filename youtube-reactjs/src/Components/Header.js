@@ -40,13 +40,14 @@ const Header = () => {
   }, [searchText]);
 
   const suggestionsCall = async () => {
-    console.log("API CALL - " + searchText);
+    // console.log("API CALL - " + searchText);
     const suggestionData = await fetch(YOUTUBE_SUGGESTION_API + searchText);
     const data = await suggestionData.json();
     setSuggestionsArray(data[1]);
     dispatch(cachedSuggestions(
       {[searchText]:data[1]}
     ));
+    
     // console.log(suggestionsArray);
   };
 
@@ -55,7 +56,7 @@ const Header = () => {
     dispatch(toggleSideBar());
   };
   return (
-    <div className="flex flex-row justify-between p-5">
+    <div className="sm:overflow-hidden md:overflow-hidden flex flex-row justify-between p-5 shadow-lg mb-4 shadow-white-500 w-auto">
       <div className="flex flex-row justify-between gap-6">
         <GiHamburgerMenu
           //when using arrow fxn..we have to call...or we cud h used onClick={toggleSideBarFxn}
