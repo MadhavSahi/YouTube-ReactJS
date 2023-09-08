@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 const VideosContainer = () => {
   // console.log("hiii-0-");
   // console.log(JSON.stringify(process.env.REACT_APP_API_KEY));
-  console.log(process.env.REACT_APP_API_KEY);
+  // console.log(process.env.REACT_APP_API_KEY);
   const [videos, setVideos] = useState([]);
   const [searchSelect, setSearchSelect] = useState(false);
   const check_search_query = useSelector(
