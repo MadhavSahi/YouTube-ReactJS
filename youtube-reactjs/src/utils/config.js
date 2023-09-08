@@ -13,7 +13,7 @@ const YOUTUBE_API_KEY_TOP_50 =
   process.env.REACT_APP_API_KEY;
 
 export const YOUTUBE_SUGGESTION_API =
-  "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+  "https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
 
 export const YOUTUBE_SEARCH_WORD_API =
   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=" +
