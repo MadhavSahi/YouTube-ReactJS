@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { toggleClose } from "../utils/appSlice";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams} from "react-router-dom";
 import CommentsContainer from "./CommentsContainer";
 // import LiveChatDisplayList from "./LiveChatDisplayList";
 import LiveChatContainer from "./LiveChatContainer";
+// ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+// import VideosContainer from "./VideosContainer";
 // import { API_KEY } from "../utils/config";
 
 //when coming back n forth...the component gets Re-Mounted again..hence it will always close the sidebar when coming on /watch page.
@@ -16,18 +18,12 @@ const VideoWatchPage = () => {
   //     "=" +
   //     API_KEY;
   const [searchParams] = useSearchParams();
+  // const [searchQuery, setSearchQuery] = useState(""); // State to store search query
   //   VIDEO_ID = searchParams.get("v");
   const dispatch = useDispatch();
-  dispatch(toggleClose());
-  useEffect(() => {
-    // getVideoData();
-    // console.log("Hey Video Watch Page");
-    // console.log("Hey Watch Page");
-    return () => {
-      // console.log("Hey Return");
-    };
-    // eslint-disable-next-line
-  }, []);
+  useEffect(()=>{
+    dispatch(toggleClose()); 
+  })
 
   //   const getVideoData = async () => {
   //     const video_data = await fetch(VIDEO_API);

@@ -5,7 +5,6 @@ import Header from "./Components/Header";
 import MainContainer from "./Components/MainContainer";
 import store from "./utils/store";
 import { Provider } from "react-redux";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import VideoWatchPage from "./Components/VideoWatchPage";
 
@@ -27,6 +26,7 @@ const appRouter = createBrowserRouter([
 ]);
 
 const App = () => {
+
   return (
     <>
       <Provider store={store}>

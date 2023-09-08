@@ -1,13 +1,17 @@
 import React, { useEffect } from "react";
 // import { live_comments } from "../utils/livechats";
-import { addToLiveChatArray,clearLiveChatArray } from "../utils/live_chat_Slice";
+import {
+  addToLiveChatArray,
+  clearLiveChatArray,
+} from "../utils/live_chat_Slice";
 import { useDispatch, useSelector } from "react-redux";
 import { generateRandomName, generateRandomText } from "../utils/livechats";
-import { toggleClose } from "../utils/appSlice";
+import { v4 as uuidv4 } from "uuid";
+// import { toggleClose } from "../utils/appSlice";
 
 const LiveChatDisplayList = () => {
   const dispatch = useDispatch();
-  dispatch(toggleClose());
+  // dispatch(toggleClose());
   const live_chat_messages = useSelector((store) => store.chat.chatArray);
   // console.log("hey live chat1");
   useEffect(() => {
@@ -19,7 +23,7 @@ const LiveChatDisplayList = () => {
           text: generateRandomText(),
         })
       );
-    }, 1000);
+    }, 1500);
 
     return () => {
       dispatch(clearLiveChatArray());
@@ -32,9 +36,9 @@ const LiveChatDisplayList = () => {
     <>
       <div className="flex flex-col-reverse h-[490px] overflow-y-scroll border border-black">
         {live_chat_messages.map((each_live_comment_obj, i) => {
+          const key = uuidv4() + Date.now(); // Generate a unique key for each element
           return (
-            <>
-              <div key={i} className="flex flex-row gap-10 p-3">
+              <div key={key} className="flex flex-row gap-10 p-3">
                 <span className="text-md font-bold w-[30%]">
                   {each_live_comment_obj.name}
                 </span>
@@ -42,7 +46,6 @@ const LiveChatDisplayList = () => {
                   {each_live_comment_obj.text}
                 </span>
               </div>
-            </>
           );
         })}
       </div>

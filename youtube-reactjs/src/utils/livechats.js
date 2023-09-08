@@ -8,7 +8,7 @@ export function generateRandomName() {
     "R Jadeja",
     "MS Dhoni",
     "Virat Kohli",
-    "Madhav Sahi",
+    // "Madhav Sahi",
     "Shreyas Iyyer",
     "Kuldeep Yadav",
     "Sachin Tendulkar",

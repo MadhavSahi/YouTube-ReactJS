@@ -7,7 +7,9 @@ const live_chat_slice = createSlice({
   },
   reducers: {
     addToLiveChatArray: (state, action) => {
+      //splice will help in only making 19 entries and then will delete the start ones...
       state.chatArray.splice(19,1);
+      //unshift will start adding from start so means new comments will come from below
       state.chatArray.unshift(action.payload);
     },
     clearLiveChatArray:(state)=>{
