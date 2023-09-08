@@ -34,8 +34,8 @@ const LiveChatDisplayList = () => {
   }, []);
   return (
     <>
-      <div className="flex flex-col-reverse h-[490px] overflow-y-scroll border border-black">
-        {live_chat_messages.map((each_live_comment_obj, i) => {
+      <div className="flex rounded-md flex-col-reverse h-[490px] overflow-y-scroll border border-black">
+        {live_chat_messages.map((each_live_comment_obj) => {
           const key = uuidv4() + Date.now(); // Generate a unique key for each element
           return (
               <div key={key} className="flex flex-row gap-10 p-3">

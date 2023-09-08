@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import 'dotenv/config';
+// import 'path-browserify'; // Add this line to polyfill the 'path' module
+// import 'crypto-browserify'; // Add this line to polyfill the 'crypto' module
+// import 'buffer'; // Add this line to polyfill the 'buffer' module
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

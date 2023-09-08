@@ -31,8 +31,8 @@ const LiveChatContainer = () => {
   };
   return (
     <>
-      <div className="flex bg-slate-200 flex-col border border-black ml-4 w-[30%] rounded-md p-2 justify-between">
-        <p className="text-center font-bold text-2xl border border-black">
+      <div className="flex bg-slate-200 flex-col  ml-4 w-[30%] rounded-md p-2 justify-between">
+        <p className="text-center font-bold text-2xl">
           Live chat
         </p>
 
@@ -40,7 +40,7 @@ const LiveChatContainer = () => {
         <LiveChatDisplayList />
 
         {/* //for entering new live chat message. */}
-        <div className="bg-gray-300 border rounded-md border-black p-2 flex-row justify-between">
+        <div className="bg-gray-300 border rounded-md p-2 flex-row justify-between">
           <input
             type="text"
             placeholder="Enter Live Chat Text Here !"

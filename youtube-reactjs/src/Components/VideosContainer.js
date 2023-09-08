@@ -55,7 +55,7 @@ const VideosContainer = () => {
           })}
         </div>
       ) : (
-        <div className="mt-1 lg:mx-3 md:mx-1 sm:mx-1 rounded-lg flex flex-row gap-1 flex-wrap">
+        <div className="mt-1 lg:mx-3 md:mx-1 sm:mx-1 rounded-lg flex flex-row gap-3 flex-wrap">
            {videos.map((item) => {
             const key = uuidv4() + Date.now(); // Generate a unique key for each element
             return (
