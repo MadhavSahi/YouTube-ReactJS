@@ -5,10 +5,11 @@
 // const YOUTUBE_API_KEY_TOP_50 =
 //   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" +
 // process.env.REACT_APP_API_KEY;
+// const API_KEY = "AIzaSyBPsE4Gw1EYFk5y0DzQsauafMt_zWsz38E";
 
-const search_word = "";
+const search_word = ""
 const YOUTUBE_API_KEY_TOP_50 =
-  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart= mostPopular&maxResults=50&regionCode=IN&key=" +
+  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" +
   process.env.REACT_APP_API_KEY;
 
 export const YOUTUBE_SUGGESTION_API =

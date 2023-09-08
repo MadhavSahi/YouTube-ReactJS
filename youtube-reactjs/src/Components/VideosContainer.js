@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 
 const VideosContainer = () => {
+  // console.log("hiii-0-");
+  // console.log("hiii-1-" + process.env.REACT_APP_API_KEY);
   const [videos, setVideos] = useState([]);
   const [searchSelect, setSearchSelect] = useState(false);
   const check_search_query = useSelector(
@@ -13,6 +15,7 @@ const VideosContainer = () => {
   );
 
   useEffect(() => {
+    // console.log("hiii-2-" + process.env.REACT_APP_API_KEY);
     // console.log("Hey video container");
     if (check_search_query !== "") {
       getSearchBoxVideos(check_search_query);
@@ -25,13 +28,14 @@ const VideosContainer = () => {
   //   return uuidv4();
   // };
   const getPopularVideos = async () => {
+    // console.log("hiii-3-" + process.env.REACT_APP_API_KEY);
     //not used Axios..fetch also works fine in production...but the next step is very imp.
     const videos_result = await fetch(YOUTUBE_API_KEY_TOP_50);
 
     //this step is very important as it will make the data into json format.
     const jsonVideoData = await videos_result.json();
 
-    // console.log(jsonVideoData);
+    // console.log("Hey- " + jsonVideoData);
     setVideos(jsonVideoData?.items);
   };
   const getSearchBoxVideos = async (check_search_query) => {
@@ -55,7 +59,7 @@ const VideosContainer = () => {
           })}
         </div>
       ) : (
-        <div className="mt-1 lg:mx-3 md:mx-1 sm:mx-1 rounded-lg flex flex-row gap-3 flex-wrap">
+        <div className="mt-1 lg:mx-3 md:mx-1 sm:mx-1 rounded-lg flex flex-row gap-1 flex-wrap">
            {videos.map((item) => {
             const key = uuidv4() + Date.now(); // Generate a unique key for each element
             return (

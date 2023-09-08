@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { toggleClose } from "../utils/appSlice";
 import { useSearchParams} from "react-router-dom";
 import CommentsContainer from "./CommentsContainer";
+import { useLocation } from "react-router-dom";
 // import LiveChatDisplayList from "./LiveChatDisplayList";
 import LiveChatContainer from "./LiveChatContainer";
 // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
@@ -11,6 +12,7 @@ import LiveChatContainer from "./LiveChatContainer";
 
 //when coming back n forth...the component gets Re-Mounted again..hence it will always close the sidebar when coming on /watch page.
 const VideoWatchPage = () => {
+  const location = useLocation();
   //   let VIDEO_ID = "";
   //   const VIDEO_API =
   //     "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=" +
@@ -23,7 +25,9 @@ const VideoWatchPage = () => {
   const dispatch = useDispatch();
   useEffect(()=>{
     dispatch(toggleClose()); 
-  })
+    window.scrollTo(0, 0);
+    // eslint-disable-next-line 
+  },[location.pathname])
 
   //   const getVideoData = async () => {
   //     const video_data = await fetch(VIDEO_API);

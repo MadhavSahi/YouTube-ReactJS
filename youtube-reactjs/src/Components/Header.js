@@ -61,11 +61,11 @@ const Header = ({ onSearchRedirect }) => {
     // Handle the click event with the suggestion
     dispatch(query_fill(each_suggestion));
     setSearchText(each_suggestion);
-    console.log("hey lol-1");
+    // console.log("hey lol-1");
   };
   const handleLiveChat_enter = (e) => {
     if (e.key === "Enter") {
-      console.log("hey lol-2");
+      // console.log("hey lol-2");
       handleSuggestionClick(searchText);
     }
   };
