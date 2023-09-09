@@ -38,9 +38,11 @@ const VideoWatchPage = () => {
   return (
     <>
       <div className="flex flex-col ml-5 w-full">
-        <div className="px-5 flex flex-row">
+        {/* <div className="px-5 flex flex-row"> */}
+        <div className="md:flex md:flex-row">
           <iframe
-            className="w-[70%] rounded-lg"
+            // className="w-[70%] rounded-lg"
+            className="w-full md:w-[70%] rounded-lg"
             // width="w-72"
             height="605"
             src={"https://www.youtube.com/embed/" + searchParams.get("v")}
