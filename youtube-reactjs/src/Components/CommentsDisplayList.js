@@ -40,7 +40,7 @@ const CommentsDisplayList = ({ commentsData }) => {
         return (
           <div
             key={key} // Set the key on the outermost element
-            className="p-1 flex flex-col gap-2 shadow-md shadow-light-500 border border-l-black border-b-black"
+            className="p-1 flex flex-col gap-2 shadow-md shadow-light-500 border border-l-black "
           >
             <p className="font-medium text-xl">{each_comment_obj?.name}</p>
             <p className="font-normal">{each_comment_obj?.text}</p>

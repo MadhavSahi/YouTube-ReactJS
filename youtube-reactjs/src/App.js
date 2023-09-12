@@ -7,6 +7,8 @@ import store from "./utils/store";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import VideoWatchPage from "./Components/VideoWatchPage";
+import "./App.css";
+import { useState } from "react";
 
 const appRouter = createBrowserRouter([
   {
@@ -26,14 +28,20 @@ const appRouter = createBrowserRouter([
 ]);
 
 const App = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
   return (
     <>
       <Provider store={store}>
-        <Header />
-        {/* <Body /> */}
-        {/* now the appRouter logic will handle the rendering */}
-        <RouterProvider router={appRouter} />
+        <div className={`App ${isDarkMode ? "dark-mode" : "light-mode"}`}>
+          <Header toggle={toggleDarkMode} />
+          {/* <Body /> */}
+          {/* now the appRouter logic will handle the rendering */}
+          <RouterProvider router={appRouter} />
+        </div>
       </Provider>
     </>
   );
