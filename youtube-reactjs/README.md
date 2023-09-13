@@ -111,7 +111,7 @@ This project is a YouTube clone built using React JS, React Router DOM, Redux, a
 
 <br>
 
-![image](../youtube-reactjs/screenshots/youtube-ss-02.PNG)
+![image](../youtube-reactjs/screenshots/youtube-ss-002.PNG)
 
 <br>
 
