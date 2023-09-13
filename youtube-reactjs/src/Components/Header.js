@@ -224,11 +224,7 @@ const Header = ({toggle}) => {
   return (
     <>
       <div
-        className=" bg-white relative sm:overflow-hidden md:overflow-hidden lg:overflow-hidden flex flex-row justify-between md:p-5 sm:p-0 sm:pt-5 shadow-lg mb-4 shadow-white-500 w-auto"
-        style={{
-          // width: "100%",
-          // maxWidth: "100%",
-        }}
+        className=" bg-white sm:overflow-hidden md:overflow-hidden lg:overflow-hidden flex flex-row justify-between md:p-5 sm:p-0 sm:pt-5 shadow-lg mb-4 shadow-white-500 w-auto"
       >
         <div className="flex flex-row md:justify-between sm:justify-center sm:gap-5 lg:gap-6">
           <GiHamburgerMenu
@@ -246,12 +242,11 @@ const Header = ({toggle}) => {
 
           {/* //responsive */}
         </div>
-        <div className="relative flex flex-row">
+        <div className=" flex flex-row">
           <div className="flex">
             <input
               placeholder="Search"
               type="text"
-              // className="pl-4 md:w-[30rem] sm:w-[10rem] h-10 outline-black-900 border-black focus:outline-black border-2 rounded-l-full"
               className="pl-4 sm:w-[60%] md:w-[1/2] lg:w-[30rem] h-10 outline-black-900 border-black focus:outline-black border-2 rounded-l-full"
               onChange={(e) => setSearchText(e.target.value)}
               value={searchText}
@@ -266,7 +261,7 @@ const Header = ({toggle}) => {
             </div>
           </div>
           {showSuggestionsDiv && (
-            <div className="flex flex-col bg-white shadow-lg absolute md:w-[30rem] sm:w-[10rem] mt-10 mx-1">
+            <div className=" flex flex-col bg-white shadow-lg absolute md:w-[30rem] sm:w-[10rem] mt-10 mx-1">
               <ul>
                 {suggestionsArray.map((each_suggestion, index) => {
                   return (
@@ -282,7 +277,6 @@ const Header = ({toggle}) => {
               </ul>
             </div>
           )}
-          {/* <button className="rounded-r-full border-black bg-black-900">SEARCh</button> */}
         </div>
         {/* <div>
           <button onClick={toggle}>Toggle Dark Mode</button>
