@@ -33,7 +33,7 @@ const LiveChatContainer = () => {
     <>
       {/* <div className="flex bg-slate-200 flex-col  ml-4 w-[30%] rounded-md p-2 justify-between"> */}
       {/* Inside LiveChatContainer.js */}
-      <div className="flex bg-slate-200 flex-col mt-5 md:mt-0 ml-2 sm:ml-4 w-full md:w-[30%] rounded-md p-2 justify-between">
+      <div className="flex bg-slate-200 flex-col mt-5 md:mt-0 md:ml-2 sm:ml-0 w-full md:w-[30%] rounded-md p-2 justify-between">
         <p className="text-center font-bold text-2xl">Live chat</p>
 
         {/* Comments  */}

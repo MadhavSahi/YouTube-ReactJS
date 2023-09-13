@@ -37,7 +37,7 @@ const VideoWatchPage = () => {
 
   return (
     <>
-      <div className="flex flex-col ml-5 w-full">
+      <div className="flex flex-col mx-5 sm:w-[90%] md:w-full">
         {/* <div className="px-5 flex flex-row"> */}
         <div className="md:flex md:flex-row">
           <iframe
