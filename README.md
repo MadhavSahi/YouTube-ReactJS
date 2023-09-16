@@ -13,7 +13,7 @@ This project is a YouTube clone built using React JS, React Router DOM, Redux, a
 
 ## 📌 Repository
 
-👉 [GitHub Repository - YouTube Clone](https://github.com/MadhavSahi/YouTube-ReactJS "Repo Link")
+👉 [GitHub Repository - YouTube Clone](https://github.com/MadhavSahi/YouTube-ReactJS/tree/main/youtube-reactjs "Repo Link")
 
 ## 📌 Libraries and Technologies Used
 
