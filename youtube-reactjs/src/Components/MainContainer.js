@@ -9,6 +9,11 @@ const MainContainer = () => {
   dispatch(toggleOpen());
   useEffect(() => {
     // console.log("hey main container");
+    return () => {
+      // console.log("return main container");
+      // console.log("hey return live chat");
+    };
+    // esl
     // eslint-disable-next-line
   }, []);
   return (

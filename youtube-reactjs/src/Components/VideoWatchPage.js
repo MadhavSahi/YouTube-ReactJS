@@ -26,6 +26,11 @@ const VideoWatchPage = () => {
   useEffect(()=>{
     dispatch(toggleClose()); 
     window.scrollTo(0, 0);
+    // console.log("hey watch page");
+    return () => {
+      // console.log("return video page");
+      // console.log("hey return live chat");
+    };
     // eslint-disable-next-line 
   },[location.pathname])
 
