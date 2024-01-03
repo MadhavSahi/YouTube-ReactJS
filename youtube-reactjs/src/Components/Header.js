@@ -178,14 +178,19 @@ const Header = ({toggle}) => {
   }, [searchText]);
 
   const suggestionsCall = async () => {
-    // console.log("API CALL - " + searchText);
-    const suggestionData = await fetch(YOUTUBE_SUGGESTION_API + searchText);
-    const data = await suggestionData.json();
-    setSuggestionsArray(data[1]);
-    dispatch(cachedSuggestions({ [searchText]: data[1] }));
-
-    // console.log(suggestionsArray);
+    try {
+      const suggestionData = await fetch(YOUTUBE_SUGGESTION_API + searchText);
+      if (!suggestionData.ok) {
+        throw new Error(`Failed to fetch suggestions. Status: ${suggestionData.status}`);
+      }
+      const data = await suggestionData.json();
+      setSuggestionsArray(data[1]);
+      dispatch(cachedSuggestions({ [searchText]: data[1] }));
+    } catch (error) {
+      // console.log('Error fetching suggestions:', error.message);
+    }
   };
+  
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
